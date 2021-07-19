@@ -130,7 +130,8 @@ input:placeholder {
 }
 
 #end-text {
-  font-size: 2.4rem;
+  font-size: 1.5rem;
+  font-weight: 400;
   color: #fff;
   text-align: center;
 }
