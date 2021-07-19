@@ -10,7 +10,7 @@ let currentQuestion = []
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
-let timerCounter = 100
+let timerCounter = 60
 
 
 let questions = [
@@ -67,7 +67,7 @@ startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
-    
+
     var timerMachine = setInterval(() => {
         
         timerCounter --
@@ -132,7 +132,7 @@ choices.forEach(choice => {
         function timerQuestion () {
                         
             if (classToApply === 'incorrect') {
-                timerCounter -= 30
+                timerCounter -= 20
                 
             } else { timerCounter -- }
 
