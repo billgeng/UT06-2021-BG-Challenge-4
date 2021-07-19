@@ -73,6 +73,7 @@ startGame = () => {
         timerCounter --
         timer.innerText = timerCounter  
         if (timerCounter === 0) {
+            alert('Please try again!')
             return window.location.assign('../index.html') 
         }
         
@@ -83,7 +84,7 @@ startGame = () => {
 
 getNewQuestion = () => {
   if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
-      localStorage.setItem ('finalScore',score)
+      localStorage.setItem ('mostReScore',score)
     
       return window.location.assign('./end.html')
   }
