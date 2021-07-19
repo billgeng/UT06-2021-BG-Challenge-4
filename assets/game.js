@@ -73,7 +73,7 @@ startGame = () => {
         timerCounter --
         timer.innerText = timerCounter  
         if (timerCounter === 0) {
-            return window.location.assign('./end.html') 
+            return window.location.assign('../index.html') 
         }
         
     }, 1000);
@@ -82,7 +82,7 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
-  if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS || timerCounter === 0) {
+  if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
       localStorage.setItem ('finalScore',score)
     
       return window.location.assign('./end.html')
@@ -132,7 +132,7 @@ choices.forEach(choice => {
         function timerQuestion () {
                         
             if (classToApply === 'incorrect') {
-                timerCounter -= 20
+                timerCounter -= 10
                 
             } else { timerCounter -- }
 
