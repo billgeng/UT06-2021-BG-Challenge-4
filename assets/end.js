@@ -14,9 +14,9 @@ saveHighScore = e => {
     e.preventDefault ()
 
     const score = {
-        name : username.value,
-        score: mostReScore
         
+        score: mostReScore,
+        name : username.value
     }
     highScores.push(score)
 
